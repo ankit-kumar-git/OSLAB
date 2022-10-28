@@ -43,10 +43,10 @@ int main()
     
     Avg_WT=total_WT/n;
     Avg_TAT=total_TAT/n;
-    printf("PID WT TAT\n");
+   printf("PID\tAT\tBT\tP\tWT\tTAT\n");
     for(i=0;i<n;i++)
     {
-        printf("%d  %d\t%d\n",i+1,a[i].WT,a[i].TAT);
+        printf("%d\t%d\t%d\t%d\t%d\t%d\n",i+1,a[i].AT,temp[i],a[i].PT,a[i].WT,a[i].TAT);
     } 
     printf("Avg waiting time of the process  is %f\n",Avg_WT);
     printf("Avg turn around time of the process is %f\n",Avg_TAT);
