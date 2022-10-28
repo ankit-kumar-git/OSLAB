@@ -1,18 +1,18 @@
 #include<stdio.h>    
 int main()  
 {  
-    int i, NOP, sum=0,count=0, y, quant, wt=0, tat=0, at[10], bt[10], ct[10],temp[10];  
+    int i, n, sum=0,count=0, y, quant, wt=0, tat=0, at[10], bt[10], ct[10],temp[10];  
     float avg_wt, avg_tat;  
     printf(" Total number of process in the system: ");  
-    scanf("%d", &NOP);
-    y = NOP;
-    for(i=0; i<NOP; i++)  
+    scanf("%d",&n);
+    y = n;
+    for(i=0; i<n; i++)  
     {  
-	printf("\n Enter the Arrival and Burst time of the Process %d\n", i+1);  
-	printf(" Arrival time is: \t");
-	scanf("%d", &at[i]);  
-	printf(" \nBurst time is: \t"); 
-	scanf("%d", &bt[i]);  
+	printf("\n Enter the Arrival and Burst time of the Process:%d\n",i+1);  
+	printf("Arrival time is:");
+	scanf("%d",&at[i]);  
+	printf("Burst time is:"); 
+	scanf("%d",&bt[i]);  
 	temp[i] = bt[i]; 
     }
     printf("Enter the Time Quantum for the process: \t");  
@@ -39,7 +39,7 @@ int main()
           tat = tat+sum-at[i];  
           count =0;     
         }  
-    	if(i==NOP-1)  
+    	if(i==n-1)  
     	{  
           i=0;  
         }  
@@ -52,8 +52,8 @@ int main()
         	i=0;  
     	}
 	}
-	avg_wt = wt * 1.0/NOP;  
-        avg_tat = tat * 1.0/NOP;  
+	avg_wt = wt * 1.0/n;  
+        avg_tat = tat * 1.0/n;  
         printf("\n Average Turn Around Time: \t%f", avg_wt);  
         printf("\n Average Waiting Time: \t%f", avg_tat);  
         return 0;   
